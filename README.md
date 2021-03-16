@@ -1,6 +1,6 @@
 # Unihemispheric Evidence Accumulation in Pigeons - Supplementary Software
 
-Supplementary software for the paper *Wittek et. al., 2021, Unihemispheric Evidence Accumulation in Pigeons, Journal of Experimental Psychology: Animal Learning and Cognition*.
+Supplementary software for the paper *Wittek et al., 2021, Unihemispheric Evidence Accumulation in Pigeons, Journal of Experimental Psychology: Animal Learning and Cognition*.
 
 There is one directory per paradigm under `/paradigms` and the code used for the analyzes of the results is located unter `/analyzes`.
 
