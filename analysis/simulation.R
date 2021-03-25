@@ -103,7 +103,6 @@ p = ggplot() +
 p
 
 
-setwd("/Users/matsuihiroshi/Dropbox/ongoingExperiment/Projects_with_Neslihan/helmet/r_files/raw figures")
 ggsave("fig9c.png", p)
 
 
@@ -116,5 +115,4 @@ p = ggplot() +
 p
 
 ggsave("fig9b.png", p)
-
 
