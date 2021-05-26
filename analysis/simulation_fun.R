@@ -7,28 +7,18 @@ perturb_by_delay = function(l, delay, v, s, A, tau){
   a = runif(1, 0, A)
   tau = sample(tau, 1)
   
-  # tau = .05
-  # s = mean(s)
-  # v = mean(v)
-  # A = mean(A)
-  
-  # tau = mean(tau)
-  
   slope = -100
   while(slope < 0){
     slope = rnorm(1, v, s)
   }
-  
-  # evidence_when_delay = (delay - tau) * slope + A
-  # evidence_when_delay = (delay) * slope + A
+
   evidence_when_delay = (delay) * slope + a
   RT = tau +  (A + 1 - a)/slope
   
   
-  # if(evidence_when_delay >(1+A)  ){
+
   if( RT <= delay ){
     resp = 0 # correctly respond to go
-    # }else if(l < evidence_when_delay & evidence_when_delay <= (1+A)){
   }else if(RT > delay & l < evidence_when_delay){
     resp = 1 # incorrectly respond to no-go
   }else{
@@ -39,8 +29,6 @@ perturb_by_delay = function(l, delay, v, s, A, tau){
   if(RT <= delay) resp = 0 
   if(RT > 5) resp = 2
   
-  
-  # if(RT - delay <= .05 & RT - delay > 0) resp = 3
   if(RT <= .05 ) resp = 3
   return(resp)
   
@@ -54,7 +42,6 @@ perturb_by_delay = function(l, delay, v, s, A, tau){
 
 # second function
 get_dfRate = function(N, l, delays, v, s, A, tau){
-  # delays = sort(unique(d_partial[d_partial$id==IDs[1],]$delay))
   
   response = NULL
   for(i in 1:length(delays)){
@@ -71,10 +58,6 @@ get_dfRate = function(N, l, delays, v, s, A, tau){
   
   # remove the fast response
   df = df[df$resp!=3, ]
-  # df = df[df$resp != 0,]
-  # df.rate = data.frame(rate = tapply(df$resp, df$delay, function(v) sum(v==1)/length(v)),
-  #                      delay = as.numeric( names(tapply(df$resp, df$delay, function(v) sum(v==1)/length(v)))),
-  #                      delta = l)
   return(df)
 }
 

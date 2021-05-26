@@ -2,7 +2,7 @@
 
 Supplementary software for the paper *Wittek et al., 2021, Unihemispheric Evidence Accumulation in Pigeons, Journal of Experimental Psychology: Animal Learning and Cognition*.
 
-There is one directory per paradigm under `/paradigms` and the code used for the analyzes of the results is located unter `/analyzes`.
+There is one directory per paradigm under `/paradigms` and the code used for the analyzes of the results is located unter `/analysis`.
 
 In case of questions or further inquieries, you can contact the corresponding author via `neslihan.wittek(at)rub.de`.
 
